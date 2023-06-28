@@ -1,0 +1,66 @@
+@import "src/styles/variables";
+@import "src/styles/breakpoints";
+
+.menu {
+  padding: 20px $padding-x;
+  @media (max-width: $desktop_xsm) {
+    padding: 20px $padding-x-mobile;
+  }
+  @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
+    padding: 20px $padding-x-sm;
+  }
+  @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
+    padding: 20px $padding-x-md;
+  }
+}
+
+.header {
+  align-items: center;
+  background-image: url($bg-header);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  height: 300px;
+  padding: 0px $padding-x;
+  @media (max-width: $desktop_xsm) {
+    padding: 0px $padding-x-mobile;
+  }
+  @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
+    padding: 0px $padding-x-sm;
+  }
+  @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
+    padding: 0px $padding-x-md;
+  }
+  &__text {
+    color: white;
+    font-size: 5rem;
+    min-width: 400px;
+    width: 40%;
+  }
+}
+
+.cardapio {
+  padding: 50px $padding-x;
+  @media (max-width: $desktop_xsm) {
+    padding: 50px $padding-x-mobile;
+  }
+  @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
+    padding: 50px $padding-x-sm;
+  }
+  @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
+    padding: 50px $padding-x-md;
+  }
+  &__title {
+    color: $dark;
+    font-size: 3rem;
+    margin-bottom: 30px;
+  }
+  &__filters {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}
