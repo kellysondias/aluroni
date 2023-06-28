@@ -4,6 +4,8 @@ Projeto desenvolvido no curso "<a href="https://cursos.alura.com.br/course/react
 
 <img src="public/aluroni.gif" alt="Demonstração do layout do site">
 
+- <a href="https://aluroni-beta-seven.vercel.app" target="_blank">Acesse o site</a>
+
 ## Neste curso eu aprendi:
 
 - <a href="https://necolas.github.io/normalize.css/" target="_blank">Normalize CSS</a>
