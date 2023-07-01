@@ -8,8 +8,6 @@ Projeto desenvolvido no curso "<a href="https://cursos.alura.com.br/course/react
 
 ## Neste curso eu aprendi:
 
-- <a href="https://sass-lang.com/" target="_blank">Sass</a>
-
 - <a href="https://necolas.github.io/normalize.css/" target="_blank">Normalize CSS</a>
 
 - <a href="https://yarnpkg.com/package/svgr" target="_blank">SVGR</a>
