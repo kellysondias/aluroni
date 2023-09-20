@@ -1,6 +1,7 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import Item from "./Item";
-import cardapio from "./items.json";
+import cardapio from "../../../data/cardapio.json";
 import styles from "./Items.module.scss";
 
 interface IItems {
@@ -59,7 +60,9 @@ const Items: React.FC<IItems> = ({ search, filter, organizer }) => {
       {hasItems ? (
         list.map((item) => <Item key={item.id} {...item} />)
       ) : (
-        <span className={styles.items__not_found}>Não foi encontrado nenhum prato com este critério.</span>
+        <span className={styles.items__not_found}>
+          Não foi encontrado nenhum prato com este critério.
+        </span>
       )}
     </div>
   );
