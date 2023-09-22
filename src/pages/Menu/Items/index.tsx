@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Item from "./Item";
 import cardapio from "../../../data/cardapio.json";
 import styles from "./Items.module.scss";
+import { Cardapio } from "types/Prato";
 
 interface IItems {
   search: string;
@@ -27,13 +28,13 @@ const Items: React.FC<IItems> = ({ search, filter, organizer }) => {
   }
 
   function sortAscendingProperty(
-    list: typeof cardapio,
+    list: Cardapio,
     property: "size" | "serving" | "price"
   ) {
     return list.sort((a, b) => (a[property] > b[property] ? 1 : -1));
   }
 
-  function organize(newList: typeof cardapio) {
+  function organize(newList: Cardapio) {
     switch (organizer) {
       case "porcao":
         return sortAscendingProperty(newList, "size");

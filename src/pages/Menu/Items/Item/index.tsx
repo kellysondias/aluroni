@@ -1,20 +1,15 @@
-import React from "react";
 import styles from "./Item.module.scss";
-import items from "../items.json";
-import classNames from "classnames";
+import TagsPrato from "../../../../components/MenuCardapio/TagsPrato";
+import { Prato } from "types/Prato";
+import { useNavigate } from "react-router-dom";
 
-type Props = (typeof items)[0];
-
-const Item: React.FC<Props> = (props) => {
-  const { title, description, category, size, serving, price, photo } = props;
-
+const Item = (props: Prato) => {
+  const { id, title, description, photo } = props;
   const alt = `Imagem representando o prato "${title}".`;
-  const label = category.label;
-  const priceText = `R$${price.toFixed(2)}`;
-  const servingText = `Serve ${serving} pessoa${serving > 1 ? "s" : ""}`;
+  const navigate = useNavigate();
 
   return (
-    <div className={styles.item}>
+    <div className={styles.item} onClick={() => navigate(`/prato/${id}`)}>
       <div className={styles.item__image}>
         <img src={photo} alt={alt} />
       </div>
@@ -23,19 +18,7 @@ const Item: React.FC<Props> = (props) => {
           <h2>{title}</h2>
           <p>{description}</p>
         </div>
-        <div className={styles.item__tags}>
-          <div
-            className={classNames(
-              styles.item__type,
-              styles[`item__type__${category.type}`]
-            )}
-          >
-            {label}
-          </div>
-          <div className={styles.item__portion}>{size}</div>
-          <div className={styles.item__qtdpeople}>{servingText}</div>
-          <div className={styles.item__value}>{priceText}</div>
-        </div>
+        <TagsPrato {...props} />
       </div>
     </div>
   );
